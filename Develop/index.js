@@ -29,3 +29,4 @@ init();
 //9.1.5  Introduced to const and how you can not update it directly.  But if the const is referencing an array or an object you are allowed to tweak with anything inside of them.
 //9.1.6 Introduced let which keeps things functionally scoped but will not mess with globals like var does.  Introduced writing functions with arrows like this const printProfileData = profileDataArr => {};.  Also introduced using arrows to make .forEach for loops like this profileDataArr.forEach(profileItem => console.log(profileItem));.
 //9.2.4  Used template literals to pull input data from an array and set each to it's own variable.  Then assigned those variable to the HTML.  Also used the term interpolation which is the act of changing a string to a variable? 
+//9.2.5 Learned about fs = require('fs') ro include the node.js fs module.  Then used the fs.writeFile to create an HTML file on our PC.
