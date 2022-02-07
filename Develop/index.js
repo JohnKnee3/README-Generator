@@ -24,3 +24,5 @@ init();
 // Build an interactive command-line application that processes user input using a third-party Node.js module
 
 // Use string literals to dynamically generate markdown from the command line
+
+//9.1.4  Made my first first console log by creating app.js and using gitbash to call it by being in it's directory and calling it with "node app.js" which will then print the console.log string.
