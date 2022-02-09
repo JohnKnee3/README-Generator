@@ -50,3 +50,4 @@ init();
 //9.3.4 Used npm init to give my code access to the npm files.   Then selected the inquirer file from there website and installed it using the code npm install inquirer.  We are one step away from using it in app.js.  Lots of good info explaining the basics.
 //9.3.5 Made questions with inquirer.prompt and followed it's format.  Then got weird with adding the ability to make the questions again if chosen.  Everything gets console.log'd still.  Very DENSE STUFF.
 //9.3.6 Adds Validates to make sue you don't accidentally skip fields.  Also used a when to only display if a previous question returns a true.
+//9.4.3 Introduces object destructuring which is how to pull things from an by name instead of location like with array destructruing.  Also deep dives on Spread Operator and Rest Operator.
