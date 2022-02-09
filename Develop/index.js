@@ -48,3 +48,4 @@ init();
 //9.2.5 Learned about fs = require('fs') ro include the node.js fs module.  Then used the fs.writeFile to create an HTML file on our PC.
 //9.2.6 created a new JS to handle the generate HTML function and pasted it in.  I then used mudule.exports = generatePage (the funcs name) to send it out.  Then in the app.js I used const generatePage = require('./src/page-template.js'); to catch it and set it to the var generatePage.
 //9.3.4 Used npm init to give my code access to the npm files.   Then selected the inquirer file from there website and installed it using the code npm install inquirer.  We are one step away from using it in app.js.  Lots of good info explaining the basics.
+//9.3.5 Made questions with inquirer.prompt and followed it's format.  Then got weird with adding the ability to make the questions again if chosen.  Everything gets console.log'd still.  Very DENSE STUFF.
