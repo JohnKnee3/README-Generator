@@ -51,3 +51,4 @@ init();
 //9.3.6 Adds Validates to make sue you don't accidentally skip fields.  Also used a when to only display if a previous question returns a true.
 //9.4.3 Introduces object destructuring which is how to pull things from an by name instead of location like with array destructruing.  Also deep dives on Spread Operator and Rest Operator.
 //9.4.4 Adds the newly dustructured data const { projects, about, ...header } = templateData; into the HTML like so ${header.name}.  Then applied it to the HTML with fs.write.File.
+//9.4.5 Adds a function that checks if about section was created and then if yes creates an HTML section for it.  Then in the HTML we call this function.
