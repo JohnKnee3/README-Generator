@@ -55,3 +55,4 @@ init();
 //9.4.6 Introduction to .Map and .Filter.  Used .filter to find which array spot selected feature or not feature and then used .map to get the data for each array in the object and apply it to the HTML.  Will need to read this module again, huge refractor involved.
 //9.5.3 Met the fs.copyFile to move the CSS from the root to the dist folder.  Made a dist folder to store the end product and changed app.js to send things to the dist folder.  Mad refactoring yet again.  May need to read this.
 //9.5.4  Created our first promise to write the page in the newly created util folder.  Doesn't function yet, still waiting for it's call.
+//9.5.5  Created our second promise this time for fs.copyFile.  Still waiting all the call, both 9.5.4 and 9.5.5 are in the new generate-site.js
