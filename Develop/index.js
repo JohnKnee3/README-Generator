@@ -53,3 +53,4 @@ init();
 //9.4.4 Adds the newly dustructured data const { projects, about, ...header } = templateData; into the HTML like so ${header.name}.  Then applied it to the HTML with fs.write.File.
 //9.4.5 Adds a function that checks if about section was created and then if yes creates an HTML section for it.  Then in the HTML we call this function.
 //9.4.6 Introduction to .Map and .Filter.  Used .filter to find which array spot selected feature or not feature and then used .map to get the data for each array in the object and apply it to the HTML.  Will need to read this module again, huge refractor involved.
+//9.5.3 Met the fs.copyFile to move the CSS from the root to the dist folder.  Made a dist folder to store the end product and changed app.js to send things to the dist folder.  Mad refactoring yet again.  May need to read this.
