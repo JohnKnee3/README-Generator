@@ -1,16 +1,95 @@
 // TODO: Include packages needed for this application
+const inquirer = require("inquirer");
 
 // TODO: Create an array of questions for user input
-const questions = [];
+const promptUser = () => {
+  return inquirer.prompt([
+    {
+      type: "input",
+      name: "title",
+      message: "What is your projects title? (Required)",
+      validate: (nameInput) => {
+        if (nameInput) {
+          return true;
+        } else {
+          console.log("Please enter your projects title!");
+          return false;
+        }
+      },
+    },
+    {
+      type: "input",
+      name: "description",
+      message: "Describe your project. (Required)",
+      validate: (nameInput) => {
+        if (nameInput) {
+          return true;
+        } else {
+          console.log("Please describe your project!");
+          return false;
+        }
+      },
+    },
+    {
+      type: "input",
+      name: "installation",
+      message: "Provide installation instructions. (Required)",
+      validate: (nameInput) => {
+        if (nameInput) {
+          return true;
+        } else {
+          console.log("Please provide installation instructions!");
+          return false;
+        }
+      },
+    },
+    {
+      type: "input",
+      name: "usage",
+      message: "Provide usage information. (Required)",
+      validate: (nameInput) => {
+        if (nameInput) {
+          return true;
+        } else {
+          console.log("Please provide usage information!");
+          return false;
+        }
+      },
+    },
+    {
+      type: "input",
+      name: "contribution",
+      message: "Provide contribution guidelines. (Required)",
+      validate: (nameInput) => {
+        if (nameInput) {
+          return true;
+        } else {
+          console.log("Please provide contribution guidelines!");
+          return false;
+        }
+      },
+    },
+    {
+      type: "input",
+      name: "test",
+      message: "Provide test instructions. (Required)",
+      validate: (nameInput) => {
+        if (nameInput) {
+          return true;
+        } else {
+          console.log("Please provide test instructions!");
+          return false;
+        }
+      },
+    },
+  ]);
+};
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {}
 
-// TODO: Create a function to initialize app
-function init() {}
-
 // Function call to initialize app
-init();
+promptUser().then((answers) => console.log(answers));
 
 //Notes
 
@@ -57,3 +136,5 @@ init();
 //9.5.4  Created our first promise to write the page in the newly created util folder.  Doesn't function yet, still waiting for it's call.
 //9.5.5  Created our second promise this time for fs.copyFile.  Still waiting all the call, both 9.5.4 and 9.5.5 are in the new generate-site.js
 //9.5.6 Added the calls to look like this module.exports = { writeFile, copyFile }; in the generate-sire.js and at the top of the app.js added this ogject destructuring const { writeFile, copyFile } = require("./utils/generate-site.js"); to grab them and use them here.
+
+// TODO: Create a function to initialize app
