@@ -12,7 +12,6 @@ function init() {}
 // Function call to initialize app
 init();
 
-
 //Notes
 
 // Modularize your code into multiple files
@@ -44,10 +43,11 @@ init();
 //9.1.4  Made my first first console log by creating app.js and using gitbash to call it by being in it's directory and calling it with "node app.js" which will then print the console.log string.
 //9.1.5  Introduced to const and how you can not update it directly.  But if the const is referencing an array or an object you are allowed to tweak with anything inside of them.
 //9.1.6 Introduced let which keeps things functionally scoped but will not mess with globals like var does.  Introduced writing functions with arrows like this const printProfileData = profileDataArr => {};.  Also introduced using arrows to make .forEach for loops like this profileDataArr.forEach(profileItem => console.log(profileItem));.
-//9.2.4  Used template literals to pull input data from an array and set each to it's own variable.  Then assigned those variable to the HTML.  Also used the term interpolation which is the act of changing a string to a variable? 
+//9.2.4  Used template literals to pull input data from an array and set each to it's own variable.  Then assigned those variable to the HTML.  Also used the term interpolation which is the act of changing a string to a variable?
 //9.2.5 Learned about fs = require('fs') ro include the node.js fs module.  Then used the fs.writeFile to create an HTML file on our PC.
 //9.2.6 created a new JS to handle the generate HTML function and pasted it in.  I then used mudule.exports = generatePage (the funcs name) to send it out.  Then in the app.js I used const generatePage = require('./src/page-template.js'); to catch it and set it to the var generatePage.
 //9.3.4 Used npm init to give my code access to the npm files.   Then selected the inquirer file from there website and installed it using the code npm install inquirer.  We are one step away from using it in app.js.  Lots of good info explaining the basics.
 //9.3.5 Made questions with inquirer.prompt and followed it's format.  Then got weird with adding the ability to make the questions again if chosen.  Everything gets console.log'd still.  Very DENSE STUFF.
 //9.3.6 Adds Validates to make sue you don't accidentally skip fields.  Also used a when to only display if a previous question returns a true.
 //9.4.3 Introduces object destructuring which is how to pull things from an by name instead of location like with array destructruing.  Also deep dives on Spread Operator and Rest Operator.
+//9.4.4 Adds the newly dustructured data const { projects, about, ...header } = templateData; into the HTML like so ${header.name}.  Then applied it to the HTML with fs.write.File.
