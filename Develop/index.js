@@ -44,45 +44,45 @@ const promptUser = () => {
         }
       },
     },
-    // {
-    //   type: "input",
-    //   name: "usage",
-    //   message: "Provide usage information. (Required)",
-    //   validate: (nameInput) => {
-    //     if (nameInput) {
-    //       return true;
-    //     } else {
-    //       console.log("Please provide usage information!");
-    //       return false;
-    //     }
-    //   },
-    // },
-    // {
-    //   type: "input",
-    //   name: "contribution",
-    //   message: "Provide contribution guidelines. (Required)",
-    //   validate: (nameInput) => {
-    //     if (nameInput) {
-    //       return true;
-    //     } else {
-    //       console.log("Please provide contribution guidelines!");
-    //       return false;
-    //     }
-    //   },
-    // },
-    // {
-    //   type: "input",
-    //   name: "test",
-    //   message: "Provide test instructions. (Required)",
-    //   validate: (nameInput) => {
-    //     if (nameInput) {
-    //       return true;
-    //     } else {
-    //       console.log("Please provide test instructions!");
-    //       return false;
-    //     }
-    //   },
-    // },
+    {
+      type: "input",
+      name: "usage",
+      message: "Provide usage information. (Required)",
+      validate: (nameInput) => {
+        if (nameInput) {
+          return true;
+        } else {
+          console.log("Please provide usage information!");
+          return false;
+        }
+      },
+    },
+    {
+      type: "input",
+      name: "contribution",
+      message: "Provide contribution guidelines. (Required)",
+      validate: (nameInput) => {
+        if (nameInput) {
+          return true;
+        } else {
+          console.log("Please provide contribution guidelines!");
+          return false;
+        }
+      },
+    },
+    {
+      type: "input",
+      name: "test",
+      message: "Provide test instructions. (Required)",
+      validate: (nameInput) => {
+        if (nameInput) {
+          return true;
+        } else {
+          console.log("Please provide test instructions!");
+          return false;
+        }
+      },
+    },
   ]);
 };
 
@@ -96,6 +96,16 @@ const generatePage = (answers) => {
   ${answers.description}
 
   ## Installation
+  ${answers.installation}
+
+  ## Usage Information
+  ${answers.usage}
+
+  ## Contribution Guidelines
+  ${answers.contribution}
+
+  ## Test Instructions
+  ${answers.test}
   `;
 };
 
