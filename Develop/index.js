@@ -134,6 +134,13 @@ const generatePage = (answers) => {
   ## Description
   ${answers.description}
 
+  ## Table of Contents
+  - [Installation](#installation)
+  - [Usage](#usage)
+  - [Contributing](#contributing)
+  - [Tests](#tests)
+  - [Questions](#questions)
+
   ## Installation
   ${answers.installation}
 

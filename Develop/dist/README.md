@@ -4,6 +4,13 @@
   ## Description
   is a dog
 
+  ## Table of Contents
+  - [Installation](#installation)
+  - [Usage](#usage)
+  - [Contributing](#contributing)
+  - [Tests](#tests)
+  - [Questions](#questions)
+
   ## Installation
   treats
 
