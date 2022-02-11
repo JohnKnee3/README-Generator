@@ -98,13 +98,13 @@ const generatePage = (answers) => {
   ## Installation
   ${answers.installation}
 
-  ## Usage Information
+  ## Usage 
   ${answers.usage}
 
-  ## Contribution Guidelines
+  ## Contributing
   ${answers.contribution}
 
-  ## Test Instructions
+  ## Tests 
   ${answers.test}
   `;
 };

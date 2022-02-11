@@ -7,12 +7,12 @@
   ## Installation
   give her treats
 
-  ## Usage Information
-  Give her pets.
+  ## Usage 
+  give her pets
 
-  ## Contributions Guidelines
-  The more toys and blankets the better.
+  ## Contributing
+  the more toys the better
 
-  ## Test Instructions
-  Never test her. She is perfect.
+  ## Tests 
+  never test the perfect pupo
   
