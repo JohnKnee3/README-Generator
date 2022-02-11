@@ -123,6 +123,12 @@ const promptUser = () => {
         }
       },
     },
+    {
+      type: "list",
+      name: "license",
+      message: "Select a license to use.",
+      choices: ["MIT", "Apache", "None"],
+    },
   ]);
 };
 
@@ -148,7 +154,7 @@ const generatePage = (answers) => {
   ## Usage 
   ${answers.usage}
 
-  ${generateMarkdown("Hey I am so happy to see you.")}
+  ${generateMarkdown(answers.license)}
   ## Contributing
   ${answers.contribution}
 
