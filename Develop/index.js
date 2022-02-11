@@ -131,8 +131,7 @@ const generatePage = (answers) => {
   console.log(answers);
   return `
   # ${answers.title}
-  ![test](https://img.shields.io/badge/license-MIT-blue)
-
+  
   ## Description
   ${answers.description}
 
@@ -150,7 +149,6 @@ const generatePage = (answers) => {
   ${answers.usage}
 
   ${generateMarkdown("Hey I am so happy to see you.")}
-
   ## Contributing
   ${answers.contribution}
 
@@ -169,7 +167,6 @@ const generatePage = (answers) => {
 };
 
 // Function call to initialize app
-// promptUser().then((answers) => console.log(answers));
 promptUser().then((answers) => {
   const pageHTML = generatePage(answers);
   fs.writeFile("./dist/README.md", pageHTML, (err) => {

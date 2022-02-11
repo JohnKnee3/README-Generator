@@ -1,7 +1,6 @@
 
   # a
-  ![test](https://img.shields.io/badge/license-MIT-blue)
-
+  
   ## Description
   a
 
@@ -18,10 +17,12 @@
   ## Usage 
   a
 
-  ## Hey I am so happy to see you.
-
+  ## License 
+  Hey I am so happy to see you.
   
-
+  ![test](https://img.shields.io/badge/license-MIT-blue)
+  
+  
   ## Contributing
   a
 
