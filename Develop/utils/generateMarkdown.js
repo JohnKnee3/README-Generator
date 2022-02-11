@@ -8,7 +8,11 @@ function renderLicenseBadge(license) {
 
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
-function renderLicenseLink(license) {}
+function renderLicenseLink(license) {
+  return `
+  <a href= https://choosealicense.com/licenses/mit/>License Link</a>
+  `;
+}
 
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
@@ -20,6 +24,7 @@ function generateMarkdown(data) {
   return `## License 
   ${data}
   ${renderLicenseBadge()}
+  ${renderLicenseLink()}
   `;
 }
 
