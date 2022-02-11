@@ -34,7 +34,7 @@ function renderLicenseSection(license) {
   A short and simple permissive license with conditions only requiring preservation of copyright and license notices. Licensed works, modifications, and larger works may be distributed under different terms and without source code.
   `;
   } else if (license === "Apache") {
-    return `## License
+    return `## License 
   Apache 
 
   A permissive license whose main conditions require preservation of copyright and license notices. Contributors provide an express grant of patent rights. Licensed works, modifications, and larger works may be distributed under different terms and without source code.
@@ -44,13 +44,22 @@ function renderLicenseSection(license) {
   }
 }
 
+//Created a function to add to the table of contents
+function renderLicenseTable(license) {
+  console.log(license);
+  if (license === "MIT" || license === "Apache") {
+    return `- [License](#license)`;
+  } else if (license === "None") {
+    return "";
+  }
+}
+
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
   return `
   ${renderLicenseSection(data)}
-  ${renderLicenseBadge(data)}
   ${renderLicenseLink(data)}
   `;
 }
 
-module.exports = generateMarkdown;
+module.exports = { generateMarkdown, renderLicenseBadge, renderLicenseTable };

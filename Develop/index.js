@@ -1,9 +1,13 @@
-// TODO: Include packages needed for this application
+// Packages needed for this application
 const inquirer = require("inquirer");
 const fs = require("fs");
-const generateMarkdown = require("./utils/generateMarkdown.js");
+const {
+  generateMarkdown,
+  renderLicenseBadge,
+  renderLicenseTable,
+} = require("./utils/generateMarkdown.js");
 
-// TODO: Create an array of questions for user input
+// An array of questions for user input
 const promptUser = () => {
   return inquirer.prompt([
     {
@@ -132,11 +136,11 @@ const promptUser = () => {
   ]);
 };
 
-// TODO: Create a function to write README file
+// function to write README file
 const generatePage = (answers) => {
   console.log(answers);
   return `
-  # ${answers.title}
+  # ${answers.title}   ${renderLicenseBadge(answers.license)}
   
   ## Description
   ${answers.description}
@@ -144,9 +148,11 @@ const generatePage = (answers) => {
   ## Table of Contents
   - [Installation](#installation)
   - [Usage](#usage)
+  ${renderLicenseTable(answers.license)}
   - [Contributing](#contributing)
   - [Tests](#tests)
   - [Questions](#questions)
+  
 
   ## Installation
   ${answers.installation}
@@ -231,5 +237,3 @@ promptUser().then((answers) => {
 //9.5.4  Created our first promise to write the page in the newly created util folder.  Doesn't function yet, still waiting for it's call.
 //9.5.5  Created our second promise this time for fs.copyFile.  Still waiting all the call, both 9.5.4 and 9.5.5 are in the new generate-site.js
 //9.5.6 Added the calls to look like this module.exports = { writeFile, copyFile }; in the generate-sire.js and at the top of the app.js added this ogject destructuring const { writeFile, copyFile } = require("./utils/generate-site.js"); to grab them and use them here.
-
-// TODO: Create a function to initialize app
