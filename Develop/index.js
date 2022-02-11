@@ -109,6 +109,19 @@ const promptUser = () => {
         }
       },
     },
+    {
+      type: "input",
+      name: "email",
+      message: "Provide your email address. (Required)",
+      validate: (nameInput) => {
+        if (nameInput) {
+          return true;
+        } else {
+          console.log("Please provide your email address!");
+          return false;
+        }
+      },
+    },
   ]);
 };
 
@@ -135,6 +148,8 @@ const generatePage = (answers) => {
 
   ## Questions
   <a href="https://github.com/${answers.github}">${answers.name}'s Amazing GitHub</a>
+  
+  If you want to contact me please send me an email at ${answers.email} and I will get back to you as soon as possible.
   `;
 };
 
