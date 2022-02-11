@@ -1,5 +1,6 @@
 // TODO: Include packages needed for this application
 const inquirer = require("inquirer");
+const fs = require("fs");
 
 // TODO: Create an array of questions for user input
 const promptUser = () => {
@@ -43,53 +44,75 @@ const promptUser = () => {
         }
       },
     },
-    {
-      type: "input",
-      name: "usage",
-      message: "Provide usage information. (Required)",
-      validate: (nameInput) => {
-        if (nameInput) {
-          return true;
-        } else {
-          console.log("Please provide usage information!");
-          return false;
-        }
-      },
-    },
-    {
-      type: "input",
-      name: "contribution",
-      message: "Provide contribution guidelines. (Required)",
-      validate: (nameInput) => {
-        if (nameInput) {
-          return true;
-        } else {
-          console.log("Please provide contribution guidelines!");
-          return false;
-        }
-      },
-    },
-    {
-      type: "input",
-      name: "test",
-      message: "Provide test instructions. (Required)",
-      validate: (nameInput) => {
-        if (nameInput) {
-          return true;
-        } else {
-          console.log("Please provide test instructions!");
-          return false;
-        }
-      },
-    },
+    // {
+    //   type: "input",
+    //   name: "usage",
+    //   message: "Provide usage information. (Required)",
+    //   validate: (nameInput) => {
+    //     if (nameInput) {
+    //       return true;
+    //     } else {
+    //       console.log("Please provide usage information!");
+    //       return false;
+    //     }
+    //   },
+    // },
+    // {
+    //   type: "input",
+    //   name: "contribution",
+    //   message: "Provide contribution guidelines. (Required)",
+    //   validate: (nameInput) => {
+    //     if (nameInput) {
+    //       return true;
+    //     } else {
+    //       console.log("Please provide contribution guidelines!");
+    //       return false;
+    //     }
+    //   },
+    // },
+    // {
+    //   type: "input",
+    //   name: "test",
+    //   message: "Provide test instructions. (Required)",
+    //   validate: (nameInput) => {
+    //     if (nameInput) {
+    //       return true;
+    //     } else {
+    //       console.log("Please provide test instructions!");
+    //       return false;
+    //     }
+    //   },
+    // },
   ]);
 };
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
+const generatePage = (answers) => {
+  console.log(answers);
+  return `
+  # ${answers.title}
+
+  ## Description
+  ${answers.description}
+
+  ## Installation
+  `;
+};
 
 // Function call to initialize app
-promptUser().then((answers) => console.log(answers));
+// promptUser().then((answers) => console.log(answers));
+promptUser().then((answers) => {
+  const pageHTML = generatePage(answers);
+  fs.writeFile("./dist/README.md", pageHTML, (err) => {
+    if (err) {
+      console.log(err);
+      return;
+    }
+    console.log(
+      "Page created! Check out README.md in the dist directory to see it!"
+    );
+  });
+});
 
 //Notes
 
