@@ -12,19 +12,6 @@ const promptUser = () => {
   return inquirer.prompt([
     {
       type: "input",
-      name: "name",
-      message: "Provide your name. (Required)",
-      validate: (nameInput) => {
-        if (nameInput) {
-          return true;
-        } else {
-          console.log("Please provide your name!");
-          return false;
-        }
-      },
-    },
-    {
-      type: "input",
       name: "title",
       message: "What is your projects title? (Required)",
       validate: (nameInput) => {
@@ -169,7 +156,7 @@ const generatePage = (answers) => {
   
   ## Questions
   <a href="https://github.com/${answers.github}">${
-    answers.name
+    answers.github
   }'s Amazing GitHub</a>
   
   If you want to contact me please send me an email at ${
@@ -194,16 +181,6 @@ promptUser().then((answers) => {
 
 //Notes
 
-// Modularize your code into multiple files
-
-// Write your code using ES6+ concepts, such as let, const, and arrow functions
-
-// Use npm (Node Package Manager) to initialize a project and install and import Node.js modules
-
-// Build an interactive command-line application that processes user input using a third-party Node.js module
-
-// Use string literals to dynamically generate markdown from the command line
-
 // GIVEN a command-line application that accepts user input
 // WHEN I am prompted for information about my application repository
 // THEN a high-quality, professional README.md is generated with the title of my project and sections entitled Description, Table of Contents, Installation, Usage, License, Contributing, Tests, and Questions
@@ -220,8 +197,8 @@ promptUser().then((answers) => {
 // WHEN I click on the links in the Table of Contents
 // THEN I am taken to the corresponding section of the README
 
-//9.1.4  Made my first first console log by creating app.js and using gitbash to call it by being in it's directory and calling it with "node app.js" which will then print the console.log string.
-//9.1.5  Introduced to const and how you can not update it directly.  But if the const is referencing an array or an object you are allowed to tweak with anything inside of them.
+//9.1.4 Made my first first console log by creating app.js and using gitbash to call it by being in it's directory and calling it with "node app.js" which will then print the console.log string.
+//9.1.5 Introduced to const and how you can not update it directly.  But if the const is referencing an array or an object you are allowed to tweak with anything inside of them.
 //9.1.6 Introduced let which keeps things functionally scoped but will not mess with globals like var does.  Introduced writing functions with arrows like this const printProfileData = profileDataArr => {};.  Also introduced using arrows to make .forEach for loops like this profileDataArr.forEach(profileItem => console.log(profileItem));.
 //9.2.4 Used template literals to pull input data from an array and set each to it's own variable.  Then assigned those variable to the HTML.  Also used the term interpolation which is the act of changing a string to a variable?
 //9.2.5 Learned about fs = require('fs') to include the node.js fs module.  Then used the fs.writeFile to create an HTML file on our PC.
@@ -234,6 +211,6 @@ promptUser().then((answers) => {
 //9.4.5 Adds a function that checks if about section was created and then if yes creates an HTML section for it.  Then in the HTML we call this function.
 //9.4.6 Introduction to .Map and .Filter.  Used .filter to find which array spot selected feature or not feature and then used .map to get the data for each array in the object and apply it to the HTML.  Will need to read this module again, huge refractor involved.
 //9.5.3 Met the fs.copyFile to move the CSS from the root to the dist folder.  Made a dist folder to store the end product and changed app.js to send things to the dist folder.  Mad refactoring yet again.  May need to read this.
-//9.5.4  Created our first promise to write the page in the newly created util folder.  Doesn't function yet, still waiting for it's call.
-//9.5.5  Created our second promise this time for fs.copyFile.  Still waiting all the call, both 9.5.4 and 9.5.5 are in the new generate-site.js
+//9.5.4 Created our first promise to write the page in the newly created util folder.  Doesn't function yet, still waiting for it's call.
+//9.5.5 Created our second promise this time for fs.copyFile.  Still waiting all the call, both 9.5.4 and 9.5.5 are in the new generate-site.js
 //9.5.6 Added the calls to look like this module.exports = { writeFile, copyFile }; in the generate-sire.js and at the top of the app.js added this ogject destructuring const { writeFile, copyFile } = require("./utils/generate-site.js"); to grab them and use them here.
