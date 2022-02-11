@@ -5,14 +5,17 @@
   is a dog
 
   ## Installation
-  give her treats
+  treats
 
   ## Usage 
-  give her pets
+  pets
 
   ## Contributing
-  the more toys the better
+  toys
 
   ## Tests 
-  never test the perfect pupo
+  never
+
+  ## Questions
+  <a href="https://github.com/JohnKnee3">Johnny's Amazing GitHub</a>
   

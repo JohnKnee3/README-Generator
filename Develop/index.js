@@ -7,6 +7,19 @@ const promptUser = () => {
   return inquirer.prompt([
     {
       type: "input",
+      name: "name",
+      message: "Provide your name. (Required)",
+      validate: (nameInput) => {
+        if (nameInput) {
+          return true;
+        } else {
+          console.log("Please provide your name!");
+          return false;
+        }
+      },
+    },
+    {
+      type: "input",
       name: "title",
       message: "What is your projects title? (Required)",
       validate: (nameInput) => {
@@ -83,6 +96,19 @@ const promptUser = () => {
         }
       },
     },
+    {
+      type: "input",
+      name: "github",
+      message: "Provide your gitHub profile name. (Required)",
+      validate: (nameInput) => {
+        if (nameInput) {
+          return true;
+        } else {
+          console.log("Please provide your github profile name!");
+          return false;
+        }
+      },
+    },
   ]);
 };
 
@@ -106,6 +132,9 @@ const generatePage = (answers) => {
 
   ## Tests 
   ${answers.test}
+
+  ## Questions
+  <a href="https://github.com/${answers.github}">${answers.name}'s Amazing GitHub</a>
   `;
 };
 
