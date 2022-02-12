@@ -120,9 +120,9 @@ const promptUser = () => {
 };
 
 // writes the README
-const writeFile = (pageHTML) => {
+const writeFile = (pageItUp) => {
   console.log("Did we make it?");
-  fs.writeFile("./dist/README.md", pageHTML, (err) => {
+  fs.writeFile("./dist/README.md", pageItUp, (err) => {
     if (err) {
       console.log(err);
       return;
@@ -138,8 +138,8 @@ promptUser()
   .then((answers) => {
     return generateMarkdown(answers);
   })
-  .then((pageHTML) => {
-    return writeFile(pageHTML);
+  .then((pageContent) => {
+    return writeFile(pageContent);
   })
   .catch((err) => {
     console.log(err);
