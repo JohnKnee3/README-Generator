@@ -1,11 +1,7 @@
 // Packages needed for this application
 const inquirer = require("inquirer");
 const fs = require("fs");
-const {
-  generateMarkdown,
-  renderLicenseBadge,
-  renderLicenseTable,
-} = require("./utils/generateMarkdown.js");
+const { generateMarkdown } = require("./utils/generateMarkdown.js");
 
 // An array of questions for user input
 const promptUser = () => {
@@ -123,51 +119,9 @@ const promptUser = () => {
   ]);
 };
 
-// function to write README file
-const generatePage = (answers) => {
-  console.log(answers);
-  return `
-  # ${answers.title}   ${renderLicenseBadge(answers.license)}
-  
-  ## Description
-  ${answers.description}
-
-  ## Table of Contents
-  - [Installation](#installation)
-  - [Usage](#usage)
-  ${renderLicenseTable(answers.license)}
-  - [Contributing](#contributing)
-  - [Tests](#tests)
-  - [Questions](#questions)
-  
-
-  ## Installation
-  ${answers.installation}
-
-  ## Usage 
-  ${answers.usage}
-
-  ${generateMarkdown(answers.license)}
-  ## Contributing
-  ${answers.contribution}
-
-  ## Tests 
-  ${answers.test}
-  
-  ## Questions
-  <a href="https://github.com/${answers.github}">${
-    answers.github
-  }'s Amazing GitHub</a>
-  
-  If you want to contact me please send me an email at ${
-    answers.email
-  } and I will get back to you as soon as possible.
-  `;
-};
-
-// Function call to initialize app
-promptUser().then((answers) => {
-  const pageHTML = generatePage(answers);
+// writes the README
+const writeFile = (pageHTML) => {
+  console.log("Did we make it?");
   fs.writeFile("./dist/README.md", pageHTML, (err) => {
     if (err) {
       console.log(err);
@@ -177,7 +131,19 @@ promptUser().then((answers) => {
       "Page created! Check out README.md in the dist directory to see it!"
     );
   });
-});
+};
+
+//Call to start the code
+promptUser()
+  .then((answers) => {
+    return generateMarkdown(answers);
+  })
+  .then((pageHTML) => {
+    return writeFile(pageHTML);
+  })
+  .catch((err) => {
+    console.log(err);
+  });
 
 //Notes
 

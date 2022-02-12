@@ -54,12 +54,46 @@ function renderLicenseTable(license) {
   }
 }
 
-// Creates a function to generate markdown for README
-function generateMarkdown(data) {
+//Creates a Markdown to be turned into the README
+const generateMarkdown = (answers) => {
+  console.log(answers);
   return `
-  ${renderLicenseSection(data)}
-  ${renderLicenseLink(data)}
-  `;
-}
+  # ${answers.title}   ${renderLicenseBadge(answers.license)}
+  
+  ## Description
+  ${answers.description}
 
-module.exports = { generateMarkdown, renderLicenseBadge, renderLicenseTable };
+  ## Table of Contents
+  - [Installation](#installation)
+  - [Usage](#usage)
+  ${renderLicenseTable(answers.license)}
+  - [Contributing](#contributing)
+  - [Tests](#tests)
+  - [Questions](#questions)
+  
+
+  ## Installation
+  ${answers.installation}
+
+  ## Usage 
+  ${answers.usage}
+
+  ${renderLicenseSection(answers.license)}
+  ## Contributing
+  ${answers.contribution}
+
+  ## Tests 
+  ${answers.test}
+  
+  ## Questions
+  <a href="https://github.com/${answers.github}">${
+    answers.github
+  }'s Amazing GitHub</a>
+  
+  If you want to contact me please send me an email at ${
+    answers.email
+  } and I will get back to you as soon as possible.
+  `;
+};
+
+module.exports = { generateMarkdown };
