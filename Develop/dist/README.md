@@ -1,8 +1,8 @@
 
-  # Mirs's Wonderful Wide World   ![test](https://img.shields.io/badge/license-MIT-blue)
+  # README Generator   ![test](https://img.shields.io/badge/license-MIT-blue)
   
   ## Description
-  It is like the coolest thing that I don't really have time to get into right now.
+  This is my seventh challenge for the UofU bootcamp. In it you will find a README Generator that asks you a series of questions in the terminal and then generates a README based on your reponses.
 
   ## Table of Contents
   - [Installation](#installation)
@@ -14,10 +14,10 @@
   
 
   ## Installation
-  Just type a ton and it should all work out.
+  Go into your terminal in the develop folder and type npm install inquirer.  This will get you the files needed to load the questions. 
 
   ## Usage 
-  Fixes everything all the time without fail.
+  Use this to create a README for your projects.
 
   
   ## License 
@@ -29,10 +29,10 @@
   <a href= https://choosealicense.com/licenses/mit/>MIT License Link</a>
   
   ## Contributing
-  Everything you do it perfect.  So just join us.
+  I can't imagine anyone will ever see this other than graders.
 
   ## Tests 
-  Man I am running out of jokes to put in this thing.
+  Navigate to the develop folder in the terminal and type node index to launch the program.
   
   ## Questions
   <a href="https://github.com/JohnKnee3">JohnKnee3's Amazing GitHub</a>
