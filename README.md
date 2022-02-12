@@ -23,7 +23,7 @@ Go into your terminal in the develop folder and type npm install inquirer. This 
 
 Use this to create a README for your projects.
 
-<img src="assets/images/README-sample.jpg" alt="Brief snip of the a created README">
+<img src="assets/images/README-again.jpg" alt="Brief snip of the a created README">
 
 ## Tests
 
