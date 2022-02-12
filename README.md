@@ -10,7 +10,6 @@ This is my seventh challenge for the UofU bootcamp. In it you will find a README
 - [Installation](#installation)
 - [Usage](#usage)
 - [Tests](#tests)
-- [Questions](#questions)
 
 ## What I Learned
 
@@ -28,12 +27,4 @@ Use this to create a README for your projects.
 
 ## Tests
 
-Navigate to the develop folder in the terminal and type node index to launch the program.
-
-## Questions
-
-<a href="https://github.com/JohnKnee3">JohnKnee3's GitHub</a>
-
-If you want to contact me please send me an email at john.a.clark3@gmail.com and I will get back to you as soon as possible.
-
-https://github.com/JohnKnee3/README-Generator
+Navigate to the develop folder in the terminal and type node index to launch the program. Here is a <a href="https://watch.screencastify.com/v/uCn6jLgeusmXbaPJAOrq">video of the README Generator in action.</a>
